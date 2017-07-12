@@ -1,4 +1,4 @@
-%f:Funcao.
+%eq:Funcao.
 %y0:Estimativa Inicial.
 %[a,b]:Intervalo de x.
 %n:Numero de Pontos.

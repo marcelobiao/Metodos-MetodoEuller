@@ -16,4 +16,5 @@ function [xi,yi] = metodoEulerExplicito(eq,y0,a,b,n)
 	    yi(i+1) = yi(i) + h * subs(f,[x,y],[xi(i),yi(i)]);
 	    xi(i+1) = xi(i) + h;
     end
+    %TODO: Implementar Erro
 end

@@ -13,4 +13,5 @@ function [xi,yi] = metodoEulerImplicito(eq,y0,a,b,n)
     
 	%Metodo
 	%TODO: Metodo resulta em uma equacao nao-linear. 
+    %TODO: Implementar Erro
 end

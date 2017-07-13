@@ -18,4 +18,5 @@ function [xi,yi] = metodoHeun(eq,y0,a,b,n)
         yi(i+1) = yi(i)+(h/2)*(f1+f2);
 	    xi(i+1) = xi(i)+h;
     end
+    %TODO: Implementar Erro
 end

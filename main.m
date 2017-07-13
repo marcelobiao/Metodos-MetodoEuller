@@ -11,9 +11,15 @@ y0=3;
 %Numero de Pontos:
 n=6;
 
-%[xEulerEx,yEulerIm]=metodoEulerExplicito(f,y0,a,b,n);
-%disp(xEulerEx);disp(yEulerIm);
-%[xHeun,yHeun]=metodoHeun(f,y0,a,b,n);
-%disp(xHeun);disp(yHeun);
+[xEulerEx,yEulerEx]=metodoEulerExplicito(f,y0,a,b,n);
+fprintf('Metodo de Euler Explicito(x/y):\n')
+disp(xEulerEx);disp(yEulerEx);
+[xEulerIm,yEulerIm]=metodoEulerImplicito(f,y0,a,b,n);
+fprintf('Metodo de Euler Implicito(x/y):\n')
+disp(xEulerIm);disp(yEulerIm);
+[xHeun,yHeun]=metodoHeun(f,y0,a,b,n);
+fprintf('Metodo de Heun(x/y):\n')
+disp(xHeun);disp(yHeun);
 [xPontoM,yPontoM]=metodoPontoCentral(f,y0,a,b,n);
+fprintf('Metodo de Ponto Central(x/y):\n')
 disp(xPontoM);disp(yPontoM);

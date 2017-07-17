@@ -17,10 +17,11 @@ function [xi,yi] = metodoEulerImplicito(eq,y0,a,b,n)
 	%Metodo
 	%TODO: Metodo resulta em uma equacao nao-linear. 
     for i = 1: n-1
+        xi(i+1) = xi(i) + h;
         ya = yi(i);
         yb = ya;
         for j = 1 : 9000
-            yb = yi(i) + h * subs(f, [x,y], [xi(i), ya]);
+            yb = yi(i) + h * subs(f, [x,y], [xi(i + 1), ya]);
             yt = abs(ya - yb);
             if (yt < 0.000001)
                 break;
@@ -32,7 +33,7 @@ function [xi,yi] = metodoEulerImplicito(eq,y0,a,b,n)
         end
         yi(i+1) = yb;
 	    %yi(i+1) = yi(i) + h * subs(f,[x,y],[xi(i),yi(i)]);
-	    xi(i+1) = xi(i) + h;
+	    
     end
     %TODO: Implementar Erro
 end

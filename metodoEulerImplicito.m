@@ -27,6 +27,8 @@ function [xi,yi] = metodoEulerImplicito(eq,y0,a,b,n)
             else
                 ya = yb;
             end
+            if (j == 8999)
+                fprintf('Metodo nao convergiu, resultado deve ser desconsiderado\n');
         end
         yi(i+1) = yb;
 	    %yi(i+1) = yi(i) + h * subs(f,[x,y],[xi(i),yi(i)]);

@@ -23,13 +23,16 @@ function [xi,yi] = metodoEulerImplicito(eq,y0,a,b,n)
         for j = 1 : 9000
             yb = yi(i) + h * subs(f, [x,y], [xi(i + 1), ya]);
             yt = abs(ya - yb);
-            if (yt < 0.000001)
+            if (yt < 0.00001)
                 break;
             else
                 ya = yb;
             end
-            if (j == 8999)
-                fprintf('Metodo nao convergiu, resultado deve ser desconsiderado\n');
+            
+        end
+        
+        if (j == 9000)
+            fprintf('Metodo nao convergiu, resultado deve ser desconsiderado\n');
         end
         yi(i+1) = yb;
 	    %yi(i+1) = yi(i) + h * subs(f,[x,y],[xi(i),yi(i)]);

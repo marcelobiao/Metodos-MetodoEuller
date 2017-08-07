@@ -19,21 +19,29 @@ fprintf('Metodo de Euler Explicito(x/y/erro):\n');
 disp(xEulerEx);
 disp(yEulerEx);
 disp(erro);
+erro_medio = mean(erro);
+fprintf('Erro médio utilizando este método: %f\n\n', erro_medio);
 
 [xEulerIm, yEulerIm, erro] = metodoEulerImplicito(f, y0, a, b, n, analitica);
 fprintf('Metodo de Euler Implicito(x/y/erro):\n');
 disp(xEulerIm);
 disp(yEulerIm);
 disp(erro);
+erro_medio = mean(erro);
+fprintf('Erro médio utilizando este método: %f\n\n', erro_medio);
 
 [xHeun, yHeun, erro] = metodoHeun(f, y0, a, b, n, analitica);
 fprintf('Metodo de Heun(x/y/erro):\n');
 disp(xHeun);
 disp(yHeun);
 disp(erro);
+erro_medio = mean(erro);
+fprintf('Erro médio utilizando este método: %f\n\n', erro_medio);
 
 [xPontoM, yPontoM, erro] = metodoPontoCentral(f, y0, a, b, n, analitica);
 fprintf('Metodo de Ponto Central(x/y/erro):\n');
 disp(xPontoM);
 disp(yPontoM);
 disp(erro);
+erro_medio = mean(erro);
+fprintf('Erro médio utilizando este método: %f\n\n', erro_medio);
